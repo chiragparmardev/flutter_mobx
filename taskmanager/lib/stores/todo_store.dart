@@ -22,4 +22,7 @@ abstract class _TodoStore with Store{
   void editTodo(index,title,date,priority){
     todoList[index] = TodoModel(title: title, date: date, priority: priority,checked: false);
   }
+
+  @computed
+  ObservableList<TodoModel> get checkedList => ObservableList.of(todoList.where((data) => data.checked));
 }

@@ -9,6 +9,14 @@ part of 'todo_store.dart';
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
 
 mixin _$TodoStore on _TodoStore, Store {
+  Computed<ObservableList<TodoModel>>? _$checkedListComputed;
+
+  @override
+  ObservableList<TodoModel> get checkedList => (_$checkedListComputed ??=
+          Computed<ObservableList<TodoModel>>(() => super.checkedList,
+              name: '_TodoStore.checkedList'))
+      .value;
+
   late final _$todoListAtom =
       Atom(name: '_TodoStore.todoList', context: context);
 
@@ -51,9 +59,21 @@ mixin _$TodoStore on _TodoStore, Store {
   }
 
   @override
+  void editTodo(dynamic index, dynamic title, dynamic date, dynamic priority) {
+    final _$actionInfo =
+        _$_TodoStoreActionController.startAction(name: '_TodoStore.editTodo');
+    try {
+      return super.editTodo(index, title, date, priority);
+    } finally {
+      _$_TodoStoreActionController.endAction(_$actionInfo);
+    }
+  }
+
+  @override
   String toString() {
     return '''
-todoList: ${todoList}
+todoList: ${todoList},
+checkedList: ${checkedList}
     ''';
   }
 }
