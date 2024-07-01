@@ -1,5 +1,4 @@
-// GENERATED CODE - DO NOT MODIFY BY HAND
-
+// GENERATED CODE - DO NOT MODIFY BY HA
 part of 'login_store.dart';
 
 // **************************************************************************

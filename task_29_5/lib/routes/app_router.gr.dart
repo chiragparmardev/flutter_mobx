@@ -138,7 +138,7 @@ class RegisterRoute extends _i6.PageRouteInfo<void> {
 }
 
 /// generated route for
-/// [_i4.SplaceScreen]
+/// [_i4.SplaceScreen]xdc
 class SplaceRoute extends _i6.PageRouteInfo<void> {
   const SplaceRoute({List<_i6.PageRouteInfo>? children})
       : super(
@@ -164,3 +164,4 @@ class UserRoute extends _i6.PageRouteInfo<void> {
 
   static const _i6.PageInfo<void> page = _i6.PageInfo<void>(name);
 }
+

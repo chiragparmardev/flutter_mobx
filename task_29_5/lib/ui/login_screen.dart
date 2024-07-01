@@ -67,7 +67,7 @@ class _LoginScreenState extends State<LoginScreen> {
                     const Padding(
                       padding: EdgeInsets.symmetric(horizontal: 30),
                       child: Text(
-                        "Welcome back you’ve been missed!",
+                        'Welcome back you’ve been missed!',
                         style: TextStyle(
                           fontSize: 15,
                           color: AppColor.black,

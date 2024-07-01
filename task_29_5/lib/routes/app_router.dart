@@ -13,3 +13,4 @@ class AppRouter extends $AppRouter {
         AutoRoute(page: ManageUserRoute.page)
       ];
 }
+

@@ -76,7 +76,7 @@ abstract class _UserStore with Store {
     } finally {
       isLoading = false;
     }
-  }
+  }                                                                                                                                   
 
   @action
   Future<dynamic> updateUser(
